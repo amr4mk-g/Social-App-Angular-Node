@@ -1,0 +1,9 @@
+<mat-toolbar color="primary">
+    <a class="home" routerLink="/">Social App</a>
+    <ul>
+        <li *ngIf="isLogin"><a routerLink="/create">New Post</a></li>
+        <li *ngIf="!isLogin"><a routerLink="/login">Login</a></li>
+        <li *ngIf="!isLogin"><a routerLink="/signup">Signup</a></li>
+        <li *ngIf="isLogin"><a (click)="logout()">Logout ({{userName}})</a></li>
+    </ul>
+</mat-toolbar>
